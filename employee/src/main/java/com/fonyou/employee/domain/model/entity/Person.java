@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.validation.constraints.NotNull;
 
 /**
  * The type Person.
@@ -18,8 +19,11 @@ import javax.persistence.Entity;
 @NoArgsConstructor
 public class Person extends EntityBase {
 
+    @NotNull
     private String names;
+    @NotNull
     private String lastNames;
+    @NotNull
     private String birthDate;
 
 }

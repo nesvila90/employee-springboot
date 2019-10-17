@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.ObjectUtils;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -31,6 +32,7 @@ import java.util.stream.Collectors;
 @RequestMapping("api/persona/v1")
 @CrossOrigin(origins = "*")
 @Api(value = "Employee Management System")
+@Validated
 public class EmployeeApiImpl {
 
     private final EmployeeService employeeService;

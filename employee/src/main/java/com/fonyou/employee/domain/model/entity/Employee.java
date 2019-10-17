@@ -1,9 +1,11 @@
 package com.fonyou.employee.domain.model.entity;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 /**
@@ -16,9 +18,11 @@ import java.math.BigDecimal;
  */
 @Entity
 @Data
+@EqualsAndHashCode(callSuper = true, of = {"id"})
 @NoArgsConstructor
 public class Employee extends Person {
 
+    @NotNull
     private BigDecimal salary;
 
     /**

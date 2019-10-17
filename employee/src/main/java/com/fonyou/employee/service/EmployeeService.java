@@ -6,6 +6,7 @@ import com.fonyou.employee.commons.exceptions.business.DataNotFoundedException;
 import com.fonyou.employee.commons.exceptions.business.base.BusinessException;
 import com.fonyou.employee.domain.model.entity.Employee;
 
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -41,7 +42,7 @@ public interface EmployeeService {
      * @param employee the employee
      * @throws DataCorruptedException the data corrupted exception
      */
-    void registreEmployee(Employee employee) throws DataCorruptedException;
+    void registreEmployee(@Valid Employee employee) throws DataCorruptedException;
 
     /**
      * Delete employee.
@@ -59,6 +60,6 @@ public interface EmployeeService {
      * @throws GeneralException        the general exception
      * @throws DataNotFoundedException the data not founded exception
      */
-    Employee updateEmployee(Employee employee) throws GeneralException, DataNotFoundedException;
+    Employee updateEmployee(@Valid Employee employee) throws GeneralException, DataNotFoundedException;
 
 }
