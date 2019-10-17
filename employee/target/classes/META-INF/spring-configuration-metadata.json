@@ -1,0 +1,12 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource.primary",
+      "type": "com.fonyou.employee.configuration.PersistenceConfig$DatasourceConfiguration",
+      "sourceType": "com.fonyou.employee.configuration.PersistenceConfig",
+      "sourceMethod": "datasourceProperties()"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
